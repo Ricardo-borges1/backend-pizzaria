@@ -186,7 +186,7 @@ var produtos = [
     {
         id: 5,
         nomeProduto: 'Pizza brotinho com queijo e tomate',
-        preço: 12.00,
+        preço:  12.00,
         descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
         avaliacao: 5,
         categoria: [

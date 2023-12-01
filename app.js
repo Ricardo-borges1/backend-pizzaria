@@ -27,7 +27,7 @@ const listarCategorias = () => {
     
      produtos.forEach((pizza) => {
         
-         if(pizza.avaliacao < 5){
+         if(pizza.avaliacao == 5){
 
              let pizzaJSON = {
                  nome: pizza.nomeProduto,
@@ -77,7 +77,28 @@ const produtoEspecifico = (id) => {
 }
 
 
+const listarProdutos = () => {
+    let produtos = pizzariaTony.produtos
+    let produtosArray = []
+    
+    produtos.forEach((produtos) => {
+        
+        let produtosInfo = {
+            id: produtos.id,
+            preco: produtos.precoProduto,
+            nomeProduto: produtos.nomeProduto,
+            descricao: produtos.descricao
+        }    
+        
+        produtosArray.push(produtosInfo)
+
+    })
+
+    let produtosJSON = { produtosArray }
+    return produtosJSON
+}
 
 //console.log (listarCategorias());
 //console.log(produtoEspecifico(2));
 //console.log (produtosBemAvaliados())
+console.log (listarProdutos());
