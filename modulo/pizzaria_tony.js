@@ -6,7 +6,7 @@ var usuario = [
     confirmacaoSenha: 'celso123',
     telefone: '11998467848',
     id: 1,
-    icone: Image,
+    icone: "Image",
     localizacao: [
         {
             rua:'Perto de algum lugar',
@@ -24,7 +24,7 @@ var usuario = [
     confirmacaoSenha: 'rick123',
     telefone: '11998249607',
     id: 2,
-    icone: Image,
+    icone: "Image",
     localizacao: [
         {
             rua:'Joaquim das Neves',
@@ -42,7 +42,7 @@ var usuario = [
     confirmacaoSenha: 'cobucci1',
     telefone: '11998447322',
     id:3,
-    icone: Image,
+    icone: "Image",
     localizacao: [
         {
             rua:'Rua da Fazendinha',
@@ -61,7 +61,7 @@ var usuario = [
     confirmacaoSenha: 'fund2',
     telefone: '11998465838',
     id:4,
-    icone: Image,
+    icone: "Image",
     localizacao: [
         {
             rua:'São Matheus',
@@ -105,8 +105,7 @@ var produtos = [
         avaliacao: 5,
         categoria: [
             {
-                categorias: {id:1, nomeCategoria}
-                
+                categorias: {id:1}
             }
         ],
         comentario: [
@@ -114,7 +113,7 @@ var produtos = [
                 id:5,
                 mensagem: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.',
                 data: '15/03/2022',
-                usuario: {id:2, nome}
+                usuario: {id:2}
             }
         ]
     },
@@ -127,7 +126,7 @@ var produtos = [
         avaliacao: 4,
         categoria: [
             {
-                categorias: {id:1, nomeCategoria}
+                categorias: {id:1}
                 
             }
         ],
@@ -136,7 +135,7 @@ var produtos = [
                 id:7,
                 mensagem: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.',
                 data: '16/01/2022',
-                usuario: {id:4, nome}
+                usuario: {id:4}
             }
         ]
     },
@@ -149,7 +148,7 @@ var produtos = [
         avaliacao: 3,
         categoria: [
             {
-                categorias: {id:1, nomeCategoria}
+                categorias: {id:1}
             }
         ],
         comentario: [
@@ -157,7 +156,7 @@ var produtos = [
                 id:9,
                 mensagem: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.',
                 data: '19/07/2023',
-                usuario: {id:1, nome}
+                usuario: {id:1}
             }
         ]
     },
@@ -170,7 +169,7 @@ var produtos = [
         avaliacao: 4,
         categoria: [
             {
-                categorias: {id:1, nomeCategoria}
+                categorias: {id:1}
                 
             }
         ],
@@ -179,7 +178,7 @@ var produtos = [
                 id:2,
                 mensagem: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.',
                 data: '17/08/2022',
-                usuario: {id:4, nome}
+                usuario: {id:4}
             }
         ]
     },
@@ -192,7 +191,7 @@ var produtos = [
         avaliacao: 5,
         categoria: [
             {
-                categorias: {id:2, nomeCategoria}
+                categorias: {id:2}
                 
             }
         ],
@@ -201,12 +200,13 @@ var produtos = [
                 id:2,
                 mensagem: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.',
                 data: '21/09/2023',
-                usuario: {id:2, nome}
+                usuario: {id:2}
             }
         ]
     },
 
-
-
-
 ]
+
+module.exports = {
+    categorias,usuario,produtos
+}
