@@ -67,9 +67,9 @@ app.get('/produtosAvaliados', cors(), async function(request,response,next){
 } )
 
 
-app.get('/produtosEspecificos', cors(), async function(request,response,next){
+app.get('/produtosEspecificos/:id', cors(), async function(request,response,next){
 
-    let mostrarProdutosEspecificos = request.params.comentario
+    let mostrarProdutosEspecificos = request.params.id
     
         let produtoEspecifico = require ('./modulo/funcoes.js');
         let produtoEspecificos = produtoEspecifico.produtoEspecifico(mostrarProdutosEspecificos);
