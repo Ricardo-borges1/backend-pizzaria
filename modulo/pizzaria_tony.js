@@ -1,13 +1,13 @@
-var usuario = [
+var usuarios = [
     {
     nome: 'Celso Arruda',
     email: 'celso123@hotmail.com',
     senha: 'celso123',
     confirmacaoSenha: 'celso123',
     telefone: '11998467848',
-    id: 1,
-    icone: "Image",
-    localizacao: [
+    id: '1',
+    imagem:'./img/xxxxxxxxxxxx',
+    endereco: [
         {
             rua:'Perto de algum lugar',
             bairro: 'Jardim Xurupita',
@@ -23,9 +23,9 @@ var usuario = [
     senha: 'rick123',
     confirmacaoSenha: 'rick123',
     telefone: '11998249607',
-    id: 2,
-    icone: "Image",
-    localizacao: [
+    id: '2',
+    imagem:'./img/xxxxxxxxxxxx',
+    endereco: [
         {
             rua:'Joaquim das Neves',
             bairro: 'Vila Caldas',
@@ -36,14 +36,14 @@ var usuario = [
     },
 
     {
-        nome: 'Leticia Cobucci',
+    nome: 'Leticia Cobucci',
     email: 'cobucci21@gmail.com',
     senha: 'cobucci1',
     confirmacaoSenha: 'cobucci1',
     telefone: '11998447322',
-    id:3,
-    icone: "Image",
-    localizacao: [
+    id:'3',
+    imagem:'./img/xxxxxxxxxxxx',
+    endereco: [
         {
             rua:'Rua da Fazendinha',
             bairro: 'Jardim Tonato',
@@ -60,9 +60,9 @@ var usuario = [
     senha: 'fund2',
     confirmacaoSenha: 'fund2',
     telefone: '11998465838',
-    id:4,
-    icone: "Image",
-    localizacao: [
+    id:'4',
+    imagem:'./img/xxxxxxxxxxxx',
+    endereco: [
         {
             rua:'São Matheus',
             bairro: 'Vila Ester',
@@ -74,139 +74,258 @@ var usuario = [
 ]
 
 var categorias = [
-    {
-       id: 1,
-       nomeCategoria:'Pizza inteira',
-       icone:'./img/xxxxxxxx'
-    },
-    {
-       id: 2,
-       nomeCategoria:'Pizza brotinho',
-       icone:'./img/xxxxxxxx'
-    },
-    {
-       id:3,
-       nomeCategoria:'Bebidas',
-       icone:'./img/xxxxxxxx'
-    },
-    {
-       id: 4,
-       nomeCategoria:'Sobremesas',
-       icone:'./img/xxxxxxxx'
-    }
-   ]
+ {
+    id: 1,
+    nome:'Pizza inteira',
+    icone:'./img/xxxxxxxx'
+ },
+ {
+    id: 2,
+    nome:'Pizza brotinho',
+    icone:'./img/xxxxxxxx'
+ },
+ {
+    id:3,
+    nome:'Bebidas',
+    icone:'./img/xxxxxxxx'
+ },
+ {
+    id: 4,
+    nome:'Sobremesas',
+    icone:'./img/xxxxxxxx'
+ },
+{
+    id:5,
+    nome:'Melanciazinha',
+    icone:'./img/xxxxxxx'
+},
+{
+    id:6,
+    nome:'sorvetinho',
+    icone:'./img/xxxxxxxxx'
+}
+]
 
 var produtos = [
     {
         id: 1,
-        nomeProduto: 'Pizza de calabreza com queijo',
-        preço: 16.00,
-        descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        avaliacao: 5,
-        categoria: [
+        nomeProduto:'Pizza de calabreza com queijo',
+        preco: 16.00,
+        descricao: "Pizza de calabreza queijo, tomate seco ",
+        avaliacao: 4,
+        imagem:'./img/xxxxxxxxxxxx',
+        categorias: [
             {
-                categorias: {id:1}
-            }
+            categoria: {id:1}
+        }
         ],
-        comentario: [
+        comentarios: [
             {
-                id:5,
-                mensagem: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.',
-                data: '15/03/2022',
-                usuario: {id:2}
-            }
+            id: 4444,
+            message: 'Pizza muito boa!!!!',
+            data: '21-08-2018',
+            usuario: {
+                id:2, nome:"Ricardo Borges"}
+        }
         ]
     },
 
     {
-        id:2,
-        nomeProduto: 'Pizza de peperoni com queijo',
-        preço: 19.00,
-        descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        avaliacao: 4,
-        categoria: [
+        id: 2,
+        nomeProduto:'Pizza de peperoni com queijo',
+        preco: 19.00,
+        descricao: "Pizza de peperoni queijo, tomate seco",
+        avaliacao: 5,
+        imagem:'./img/xxxxxxxxxxxx',
+        categorias: [
             {
-                categorias: {id:1}
-                
-            }
+            categoria: {id:1, nome:'Pizza inteira'}
+        }
         ],
-        comentario: [
+        comentarios: [
             {
-                id:7,
-                mensagem: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.',
-                data: '16/01/2022',
-                usuario: {id:4}
-            }
+            id: 4443,
+            message: 'Ótima pizza uma delícia, chegou quentinha ',
+            data: '20-03-2018',
+            usuario: {
+                id:1,
+                nome:'Celso Arruda',
+                     }
+        }
         ]
     },
-
     {
         id: 3,
-        nomeProduto: 'Pizza de calabreza com queijo',
-        preço: 16.00,
-        descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        avaliacao: 3,
-        categoria: [
+        nomeProduto:'Pizza de calabreza com queijo e borda recheada',
+        preco: 19.00,
+        descricao: "Pizza de peperoni queijo, tomate seco, borda recheada de catupiry ou cheddar",
+        avaliacao: 4,
+        imagem:'./img/xxxxxxxxxxxx',
+        categorias: [
             {
-                categorias: {id:1}
-            }
+            categoria: {id:1, nome:'Pizza inteira'}
+        }
         ],
-        comentario: [
+        comentarios: [
             {
-                id:9,
-                mensagem: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.',
-                data: '19/07/2023',
-                usuario: {id:1}
-            }
+            id: 4449,
+            message: 'Chegou bem rápida, e a borda bem recheada',
+            data: '20-04-2018',
+            usuario: {
+                id:1,
+                nome:'Celso Arruda',
+                     }
+        }
         ]
     },
-
     {
         id: 4,
-        nomeProduto: 'Pizza de peperoni com queijo e tomate',
-        preço: 19.00,
-        descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        nomeProduto:'Pizza brotinho ocm queijo e tomate',
+        descricao: "Pizza brotinho de 4 pedaços e borda recheada",
+        preco:12.00,
         avaliacao: 4,
-        categoria: [
+        imagem:'./img/xxxxxxxxxxxx',
+        categorias: [
             {
-                categorias: {id:1}
-                
-            }
+            categoria: {id:2, nome:'Pizza brotinho' }
+        }
         ],
-        comentario: [
+        comentarios: [
             {
-                id:2,
-                mensagem: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.',
-                data: '17/08/2022',
-                usuario: {id:4}
-            }
+            id: 4445,
+            message: '',
+            data: '20-04-2018',
+            usuario: {
+                id:1,
+                nome:'Celso Arruda',
+                     }
+        }
         ]
     },
-
     {
-        id: 5,
-        nomeProduto: 'Pizza brotinho com queijo e tomate',
-        preço:  12.00,
-        descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        avaliacao: 5,
-        categoria: [
+        id:5,
+        nomeProduto:'Pizza de peperone com queijo e tomate',
+        descricao: "Pizza de peperoni queijo, tomate seco, borda recheada de catupiry ou cheddar",
+        preco: 16.00,
+        avaliacao: 4,
+        imagem:'./img/xxxxxxxxxxxx',
+        categorias: [
             {
-                categorias: {id:2}
-                
-            }
+            categoria: {id:1, nome:'Pizza inteira'}
+        }
         ],
-        comentario: [
+        comentarios: [
             {
-                id:2,
-                mensagem: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.',
-                data: '21/09/2023',
-                usuario: {id:2}
-            }
+            id: 4445,
+            message: '',
+            data: '20-04-2018',
+            usuario: {
+                id:1,
+                nome:'Celso Arruda',
+                     }
+        }
         ]
     },
+    {
+        id: 6,
+        nomeProduto:'Coca-Cola 3L',
+        descricao: "Refrigerante 3 litros embalagem econômica",
+        preco: 14.99,
+        avaliacao: 2,
+        imagem:'./img/xxxxxxxxxxxx',
+        categorias: [
+            {
+            categoria: {id:3, nome:'Bebidas'}
+        }
+        ],
+        comentarios: [
+            {
+            id: '',
+            message: '',
+            data: '',
+            usuario: {
+                id:'',
+                nome:'',
+                     }
+        }
+        ]
+    },
+    {
+        id: 7,
+        nomeProduto:'Cerveja Heineken',
+        descricao: "Heineken Lager Beer",
+        preco: 17.99,
+        avaliacao: 5,
+        imagem:'./img/xxxxxxxxxxxx',
+        categorias: [
+            {
+            categoria: {id:3, nome:'Bebidas'}
+        }
+        ],
+        comentarios: [
+            {
+            id: '',
+            message: '',
+            data: '',
+            usuario: {
+                id:'',
+                nome:'',
+                     }
+        }
+        ]
+    },
+    {
+        id: 8,
+        nomeProduto:'Guaraná 2L',
+        descricao: "Refrigerante garrafa",
+        preco: 10.00,
+        avaliacao: 3,
+        imagem:'./img/xxxxxxxxxxxx',
+        categorias: [
+            {
+            categoria: {id:3, nome:'Bebidas'}
+        }
+        ],
+        comentarios: [
+            {
+            id: '',
+            message: '',
+            data: '',
+            usuario: {
+                id:'',
+                nome:'',
+                     }
+        }
+        ]
+    },
+    {
+        id: 9,
+        nomeProduto:'Skol',
+        descricao: "Cerveja de lata",
+        preco: 7.00,
+        avaliacao: 4,
+        imagem:'./img/xxxxxxxxxxxx',
+        categorias: [
+            {
+            categoria: {id:3, nome:'Bebidas'}
+        }
+        ],
+        comentarios: [
+            {
+            id: '',
+            message: '',
+            data: '',
+            usuario: {
+                id:'',
+                nome:'',
+                     }
+        }
+        ]
+    }
+
 
 ]
 
 module.exports = {
-    categorias,usuario,produtos
+    categorias,usuarios,produtos
 }

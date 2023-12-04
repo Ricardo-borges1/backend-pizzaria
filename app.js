@@ -1,104 +1,86 @@
+const express = require('express')
+const cors = require('cors')
+const bodyParser = require('body-parser')
 
-var  pizzariaTony = require ('./modulo/pizzaria_tony.js')
+const app = express();
 
-const listarCategorias = () => {
-    let categorias = pizzariaTony.categorias
-    let categoriasArray = []
+app.use((request,response,next) =>{
+    response.header('Acess-Control-Allow-Origin','*');
+    response.header('Acess-Control-Allow-Methods', 'GET');
+    app.use(cors())
     
-    categorias.forEach((categoria) => {
-        
-        let categoriaInfo = {
-            id: categoria.id,
-            nome: categoria.nomeCategoria,
-            imagem: categoria.icone 
-        }    
-        
-        categoriasArray.push(categoriaInfo)
+    next();
+})
 
-    })
 
-    let categoriasJSON = { categoriasArray }
-    return categoriasJSON
-}
+app.get('/categorias', cors(), async function(request,response,next){
 
- const produtosBemAvaliados = () => {
-    let produtos = pizzariaTony.produtos
-    let produtosArray = []
+    let categoria = require ('./modulo/funcoes.js');
+    let categorias = categoria.listarCategorias();
+
+        response.json(categorias);
+        response.status(200);
     
-     produtos.forEach((pizza) => {
-        
-         if(pizza.avaliacao == 5){
+} )
 
-             let pizzaJSON = {
-                 nome: pizza.nomeProduto,
-                 id: pizza.id,
-                 avaliacao: pizza.avaliacao
-             }
 
-             produtosArray.push(pizzaJSON)
+app.get('/comentarios/:comentario', cors(), async function(request,response,next){
 
-         }
+let mostrarComentario = request.params.comentario
 
-     })
+    let categoria = require ('./modulo/funcoes.js');
+    let categorias = categoria.comentarios(mostrarComentario);
 
-     let produtosJSON = { produtosArray }
-     return produtosJSON
- }
-
-const produtoEspecifico = (id) => {
-    let produtos = pizzariaTony.produtos
-    let produtosArray = []
-    let idProduto = id
-    let status = false
+        response.json(categorias);
+        response.status(200);
     
-    produtos.forEach((pizza) => {
-        
-        if(pizza.id == idProduto){
+} )
 
-            let pizzaJSON = {
-                nome: pizza.nomeProduto,
-                id: pizza.id,
-            }
-            
-            status = true
-            produtosArray.push(pizzaJSON)
+app.get('/produtos', cors(), async function(request,response,next){
 
-        }
+    let produto = require ('./modulo/funcoes.js');
+    let produtos = produto.listarProdutos();
 
-    })
-
-    let produtosJSON = { produtosArray }
-
-    if(status){
-        return produtosJSON
-    } else {
-        return false
-    }
-}
-
-
-const listarProdutos = () => {
-    let produtos = pizzariaTony.produtos
-    let produtosArray = []
+        response.json(produtos);
+        response.status(200);
     
-    produtos.forEach((produtos) => {
+} )
+
+app.get('/usuarios', cors(), async function(request,response,next){
+
+    let usuario = require ('./modulo/funcoes.js');
+    let usuarios = usuario.listarUsuarios();
+
+        response.json(usuarios);
+        response.status(200);
+    
+} )
+
+app.get('/produtosAvaliados', cors(), async function(request,response,next){
+
+    let produto = require ('./modulo/funcoes.js');
+    let produtos = produto.produtosBemAvaliados();
+
+        response.json(produtos);
+        response.status(200);
+    
+} )
+
+
+app.get('/produtosEspecificos', cors(), async function(request,response,next){
+
+    let produtoEspecifico = request.params.produtosEspecificos
+    
+        let produtoEspecifico = require ('./modulo/funcoes.js');
+        let especifico = especifico.comentarios(produtoEspecifico);
+    
+            response.json(produtoEspecifico);
+            response.status(200);
         
-        let produtosInfo = {
-            id: produtos.id,
-            preco: produtos.precoProduto,
-            nomeProduto: produtos.nomeProduto,
-            descricao: produtos.descricao
-        }    
-        
-        produtosArray.push(produtosInfo)
+    } )
 
-    })
 
-    let produtosJSON = { produtosArray }
-    return produtosJSON
-}
+app.listen('8080', function(){
+    console.log('API FUNCIONANDO')
+})
 
-//console.log (listarCategorias());
-//console.log(produtoEspecifico(2));
-//console.log (produtosBemAvaliados())
-console.log (listarProdutos());
