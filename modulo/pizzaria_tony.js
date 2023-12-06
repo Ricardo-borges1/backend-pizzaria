@@ -123,6 +123,7 @@ var produtos = [
             {
             id: 4444,
             message: 'Pizza muito boa!!!!',
+            descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             data: '21-08-2018',
             usuario: {
                 id:2, nome:"Ricardo Borges"}
@@ -147,6 +148,8 @@ var produtos = [
             id: 4443,
             message: 'Ótima pizza uma delícia, chegou quentinha ',
             data: '20-03-2018',
+            foto: "./img/Ellipse 7.svg",
+            descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             usuario: {
                 id:1,
                 nome:'Celso Arruda',
@@ -171,9 +174,10 @@ var produtos = [
             id: 4449,
             message: 'Chegou bem rápida, e a borda bem recheada',
             data: '20-04-2018',
+            descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             usuario: {
-                id:1,
-                nome:'Celso Arruda',
+                id:3,
+                nome:'Leticia Cobucci',
                      }
         }
         ]
@@ -194,10 +198,11 @@ var produtos = [
             {
             id: 4445,
             message: '',
+            descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             data: '20-04-2018',
             usuario: {
-                id:1,
-                nome:'Celso Arruda',
+                id:4,
+                nome:'Edna Almeidah',
                      }
         }
         ]
@@ -218,6 +223,7 @@ var produtos = [
             {
             id: 4445,
             message: '',
+            descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             data: '20-04-2018',
             usuario: {
                 id:1,
@@ -242,6 +248,7 @@ var produtos = [
             {
             id: '',
             message: '',
+            descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             data: '',
             usuario: {
                 id:'',
@@ -256,54 +263,6 @@ var produtos = [
         descricao: "Heineken Lager Beer",
         preco: 17.99,
         avaliacao: 5,
-        imagem:'./img/xxxxxxxxxxxx',
-        categorias: [
-            {
-            categoria: {id:3, nome:'Bebidas'}
-        }
-        ],
-        comentarios: [
-            {
-            id: '',
-            message: '',
-            data: '',
-            usuario: {
-                id:'',
-                nome:'',
-                     }
-        }
-        ]
-    },
-    {
-        id: 8,
-        nomeProduto:'Guaraná 2L',
-        descricao: "Refrigerante garrafa",
-        preco: 10.00,
-        avaliacao: 3,
-        imagem:'./img/xxxxxxxxxxxx',
-        categorias: [
-            {
-            categoria: {id:3, nome:'Bebidas'}
-        }
-        ],
-        comentarios: [
-            {
-            id: '',
-            message: '',
-            data: '',
-            usuario: {
-                id:'',
-                nome:'',
-                     }
-        }
-        ]
-    },
-    {
-        id: 9,
-        nomeProduto:'Skol',
-        descricao: "Cerveja de lata",
-        preco: 7.00,
-        avaliacao: 4,
         imagem:'./img/xxxxxxxxxxxx',
         categorias: [
             {

@@ -78,6 +78,8 @@ const produtoEspecifico = (id) => {
     }
 }
 
+
+
 const usuarioEspecifico = (id) => {
     let usuarios = pizzariaTony. usuarios
     let idUsuario = id
@@ -165,10 +167,13 @@ const comentarios = (id) => {
             
                 let comentariosJSON = {
                     
+                    nome: usuarioEspecifico(comentarios.usuario.id).nome,
                     id: comentarios.id,
-                    mensagem: comentarios.message,
+                    descricao: comentarios.descricao,
                     data: comentarios.data,
-                    usuario: comentarios.usuario.id
+                    usuario: comentarios.usuario.id,
+                    foto: comentarios.foto,
+                    titulo: comentarios.message
                 }
                 
                 status = true
@@ -194,7 +199,7 @@ const comentarios = (id) => {
 //console.log(produtoEspecifico(2));
 //console.log (produtosBemAvaliados())
 //console.log (listarProdutos());
-//console.log (comentarios(1))
+console.log (comentarios(1))
 //console.log (listarUsuarios ());
 //console.log (usuarioEspecifico (1));
 

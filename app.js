@@ -26,13 +26,13 @@ app.get('/categorias', cors(), async function(request,response,next){
 
 app.get('/comentarios/:id', cors(), async function(request,response,next){
 
-let mostrarComentario = request.params.comentario
+let mostrarComentario = request.params.id
 
     let categoria = require ('./modulo/funcoes.js');
     let categorias = categoria.comentarios(mostrarComentario);
 
-        response.json(categorias);
-        response.status(200);
+    response.json(categorias);
+    response.status(200);
     
 } )
 
