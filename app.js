@@ -24,7 +24,7 @@ app.get('/categorias', cors(), async function(request,response,next){
 } )
 
 
-app.get('/comentarios/:comentario', cors(), async function(request,response,next){
+app.get('/comentarios/:id', cors(), async function(request,response,next){
 
 let mostrarComentario = request.params.comentario
 
@@ -78,6 +78,19 @@ app.get('/produtosEspecificos/:id', cors(), async function(request,response,next
             response.status(200);
         
     } )
+
+
+app.get('/usuarioEspecificos/:id', cors(), async function(request,response,next){
+
+        let mostrarUsuariosEspecificos = request.params.id
+        
+            let usuarioEspecifico = require ('./modulo/funcoes.js');
+            let usuariosEspecifico = usuarioEspecifico.usuarioEspecifico(mostrarUsuariosEspecificos);
+        
+                response.json(usuariosEspecifico);
+                response.status(200);
+            
+        } )
 
 
 app.listen('8080', function(){
