@@ -190,7 +190,6 @@ const comentarios = (id) => {
 }
 
 
-
 //console.log (listarCategorias());
 //console.log(produtoEspecifico(2));
 //console.log (produtosBemAvaliados())
@@ -209,3 +208,4 @@ module.exports = {
     produtoEspecifico,
     usuarioEspecifico
 }
+

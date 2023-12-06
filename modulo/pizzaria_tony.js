@@ -96,12 +96,12 @@ var categorias = [
  },
 {
     id:5,
-    nome:'Melanciazinha',
+    nome:'Frutas',
     icone:'./img/xxxxxxx'
 },
 {
     id:6,
-    nome:'sorvetinho',
+    nome:'sorvete',
     icone:'./img/xxxxxxxxx'
 }
 ]
